@@ -4,7 +4,7 @@ require_relative '../lib/google_api_wrapper'
 describe SearchEngine do
   it 'returns a list of book objects' do
     searcher = SearchEngine.new
-    allow(searcher).to receive(:search).and_return([Book.new('a', 'b', 'c')])
+    allow(searcher).to receive(:search).and_return([Book.new(title: 'a', author: 'b', publisher: 'c')])
     result = searcher.search('abc')
 
     expect(result.length).to eq(1)

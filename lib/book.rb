@@ -1,9 +1,9 @@
 class Book
   attr_reader :title, :author, :publisher
 
-  def initialize(title, author, publisher)
-    @title = title
-    @author = author
-    @publisher = publisher
+  def initialize(args)
+    @title = args[:title] || 'N/A'
+    @author = args[:author] || 'N/A'
+    @publisher = args[:publisher] || 'N/A'
   end
 end

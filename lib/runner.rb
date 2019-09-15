@@ -1,20 +1,25 @@
 require_relative './reading'
+require_relative './presenter'
+require_relative './book'
+require_relative './search_engine'
 require_relative './io_adapter'
 require_relative './google_api_wrapper'
 
 io = IOadapter.new($stdin, $stdout)
-io.console_output('Welcome')
-
-io.console_output("1. View reading list \n2. Search some book")
-answer = io.user_input
 reading = Reading.new
-sapiens = { title: 'Sapiens', author: 'Harari', publisher: 'Harper' }
-reading.add(sapiens)
+search_engine = SearchEngine.new
+presenter = Presenter.new
 
-if answer == '1'
-  puts 'Reading List'
-  puts reading.reading_list
+io.console_output('Welcome')
+io.console_output("1. View reading list \n2. Search some book")
+
+if io.user_input == '1'
+  io.console_output('*** Reading List ***')
+  io.console_output(reading.reading_list)
 else
-  puts 'Calling Google Books API'
-  GoogleBooksApiWrapper.search('Yuval Noah Harari')
+  io.console_output('Enter a book title or book author')
+  search_word = io.user_input
+  io.console_output('Searching...')
+  result = search_engine.search(search_word)
+  io.console_output(presenter.present(result))
 end
