@@ -1,11 +1,13 @@
 require_relative '../lib/menu'
 require_relative '../lib/io_adapter'
+require_relative '../lib/validation'
 
 describe Menu do
   describe '#display' do
     it 'displays the main menu' do
       mock_io_adapter = IOadapter.new(StringIO.new, StringIO.new)
-      menu = Menu.new(mock_io_adapter)
+      validation = Validation.new
+      menu = Menu.new(mock_io_adapter, validation)
 
       menu.display(menu.main_menu)
       output_stream = mock_io_adapter.output.string
