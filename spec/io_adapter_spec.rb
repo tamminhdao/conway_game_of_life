@@ -1,4 +1,4 @@
-require_relative '../lib/io_adapter'
+require 'spec_helper'
 
 describe IOadapter do
   before(:each) do

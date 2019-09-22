@@ -1,5 +1,4 @@
-require_relative '../lib/presenter'
-require_relative '../lib/book'
+require 'spec_helper'
 
 describe Presenter do
   it 'takes an array of books objects and presents them in readable string' do

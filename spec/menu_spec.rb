@@ -1,6 +1,4 @@
-require_relative '../lib/menu'
-require_relative '../lib/io_adapter'
-require_relative '../lib/validation'
+require 'spec_helper'
 
 describe Menu do
   describe '#display' do

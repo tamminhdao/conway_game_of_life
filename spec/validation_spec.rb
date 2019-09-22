@@ -1,4 +1,4 @@
-require_relative '../lib/validation'
+require 'spec_helper'
 
 describe Validation do
   before(:each) do

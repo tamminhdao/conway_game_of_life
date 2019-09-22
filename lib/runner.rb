@@ -1,11 +1,5 @@
-require_relative './reading'
-require_relative './presenter'
-require_relative './book'
-require_relative './validation'
-require_relative './menu'
-require_relative './search_engine'
-require_relative './io_adapter'
-require_relative './google_api_wrapper'
+$LOAD_PATH << File.expand_path('../lib', __dir__)
+require 'timsach'
 
 io = IOadapter.new($stdin, $stdout)
 reading = Reading.new

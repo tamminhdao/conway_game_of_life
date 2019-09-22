@@ -1,5 +1,4 @@
-require_relative '../lib/search_engine'
-require_relative '../lib/google_api_wrapper'
+require 'spec_helper'
 
 describe SearchEngine do
   it 'returns a list of book objects' do

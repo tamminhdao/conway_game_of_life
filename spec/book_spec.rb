@@ -1,4 +1,4 @@
-require_relative '../lib/book'
+require 'spec_helper'
 
 describe Book do
   it 'sets attribute to N/A if encounter nil' do

@@ -1,5 +1,4 @@
-require_relative '../lib/reading'
-require_relative '../lib/book'
+require 'spec_helper'
 
 describe Reading do
   before(:each) do
