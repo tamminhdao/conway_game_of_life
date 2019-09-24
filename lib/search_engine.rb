@@ -1,5 +1,3 @@
-require_relative './book'
-
 class SearchEngine
   def search(keyword)
     api_result = GoogleBooksApiWrapper.search(keyword)

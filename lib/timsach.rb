@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 $LOAD_PATH << File.expand_path('../lib', __dir__)
 
 require 'validation'
@@ -9,3 +8,4 @@ require 'reading'
 require 'search_engine'
 require 'book'
 require 'google_api_wrapper'
+require 'runner'
