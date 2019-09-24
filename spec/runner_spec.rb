@@ -19,7 +19,6 @@ describe Runner do
                           reading: @reading,
                           search_engine: @search_engine,
                           presenter: @presenter,
-                          validator: @validator,
                           menu: menu)
 
       runner.main_menu_loop
@@ -39,7 +38,6 @@ describe Runner do
                           reading: @reading,
                           search_engine: @search_engine,
                           presenter: @presenter,
-                          validator: @validator,
                           menu: menu)
 
       runner.main_menu_loop
@@ -60,7 +58,6 @@ describe Runner do
                           reading: @reading,
                           search_engine: @search_engine,
                           presenter: @presenter,
-                          validator: @validator,
                           menu: menu)
 
       book = Book.new(title: 'Harry Potter', author: 'JK Rowling', publisher: 'Pottermore')

@@ -13,7 +13,6 @@ runner = Runner.new(io: io,
                     reading: reading,
                     search_engine: search_engine,
                     presenter: presenter,
-                    validator: validator,
                     menu: menu)
 
 runner.main_menu_loop

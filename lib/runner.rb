@@ -1,12 +1,11 @@
 class Runner
-  attr_reader :io, :reading, :search_engine, :presenter, :validator, :menu
+  attr_reader :io, :reading, :search_engine, :presenter, :menu
 
   def initialize(args)
     @io = args[:io]
     @reading = args[:reading]
     @search_engine = args[:search_engine]
     @presenter = args[:presenter]
-    @validator = args[:validator]
     @menu = args[:menu]
   end
 
